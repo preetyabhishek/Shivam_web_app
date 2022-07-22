@@ -1,0 +1,29 @@
+﻿@page
+@model Shivam_web_app.Pages.IntroModel
+@{
+}
+<title>@ViewData["Title"] - Shivam_Intro</title>
+<div class="text-center">
+    <h3 class="display-4">Shivam Sharma</h3>
+<form>
+    <input type="text" name="num1" placeholder="Enter 1st Number">
+	<input type="text" name="num2" placeholder="Enter 2nd Number">
+	<br />
+	<button>Calculate Sum</button>
+
+</form>
+<script>
+	'use strict';
+const calcButton = document.querySelector('.calc-sum button');
+calcButton.addEventListener('click', (a, b) => {
+	const num1 = document.querySelector('[name="num1"]').value;
+	const num2 = document.querySelector('[name="num2"]').value;
+	const results = document.querySelector('.calc-results');
+	const sum = Number(num1) + Number(num2);
+	document.querySelector('.fa-equals').style.display = 'inline-block';
+	results.innerHTML = sum;
+	
+	return results;
+});
+</script>
+</div>
